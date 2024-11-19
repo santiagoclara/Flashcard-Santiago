@@ -9,9 +9,9 @@ criaCartao(
     'O álbum auto-denominado, Beyoncé'
     )
  criaCartao(
-     categoria,
-     pergunta,
-     resposta
+     "Opnião da autora",
+     "Quais as melhores músicas da Beyoncé segundo a criadora do site?",
+     "Formation, Love Drought and XO."
      )
     
 
