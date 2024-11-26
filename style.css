@@ -1,0 +1,113 @@
+:root{
+    --texto-principal:#000000;
+    --texto-pergunta: #000000;
+    --texto-resposta: #000000;
+
+}
+
+body {
+    background: url('Beyoncé.wallpaper.jpg');
+    font-family: Bai Jamjuree;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem;
+    gap: 3rem;
+}
+
+.cartao {
+    margin: 1rem 1rem;
+    color:var(--texto-pergunta);
+    border: 2px solid var(--texto-pergunta);
+    height: 20rem;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
+    border-radius: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.cartao__conteudo {
+    text-align: center;
+    color:var(--texto-pergunta);
+    color: var(--texto-pergunta);
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+}
+
+.cartao__conteudo h3{
+    color:var(--texto-pergunta);
+    border: 2px solid var(--texto-pergunta);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+    backface-visibility: hidden;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.cartao__conteudo__pergunta p{
+   color: var(--texto-pergunta);
+   font-weight: 600;
+   font-size: 22px;
+   margin-top: 7rem;
+}
+.cartao__conteudo__resposta p{
+    color: var(--texto-pergunta);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding-top: 2em;
+    margin-top: 6rem;
+}
+
+.cartao.active .cartao__conteudo{
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta{
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao__conteudo__resposta{
+    transform: rotateY(180deg);
+   
+}
+
+footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+ @media (max-width: 560px) {
+    .cartao{
+        flex: 1 0 calc(100% - 1rem)
+ }
+ .cartao.active h3{
+    font-size: 3vw;
+    .cartao__conteudo p{
+        font-size: 4vw;
+    }
+ }
+
+ 
+ }
